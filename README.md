@@ -4,6 +4,11 @@
 
 <img src="./images/pipeline.png" alt="pipeline" height="1000"/>
 
+```bash
+# Filter short contigs
+bioawk -c fastx '{if (length($seq) >= 1000) print ">"$name"\n"$seq}' scaffolds.fasta > scaffolds_min1000.fasta
+```
+
 # AUGUSTUS
 ```bash
 augustus --genemodel=complete --species=SPECIES contigs.fna > genes.gff
