@@ -1,4 +1,4 @@
-# USAGE: python predict_proteases.py [options] hmmfile seqfile
+#!/usr/bin/env python3
 from argparse import ArgumentParser, Namespace
 
 from pyhmmer.easel import SequenceFile
